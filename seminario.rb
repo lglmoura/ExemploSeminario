@@ -1,7 +1,7 @@
 class Seminario
   attr_accessor :codigo, :descricao, :numMax, :alunos,:tipo
 
-  def initialize(codigo,descricao,numMax,alunos=[],tipo)
+  def initialize(codigo,descricao,numMax,tipo,alunos=[])
     @codigo = codigo
     @descricao = descricao
     @numMax = numMax

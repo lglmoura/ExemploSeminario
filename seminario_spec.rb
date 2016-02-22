@@ -6,7 +6,7 @@ describe Seminario do
     before(:each) do
         @tipo_seminario = TipoSeminario.new("12345","Luiz")
         @seminario = Seminario.new("1111","Teste",1,@tipo_seminario)
-        @aluno = 'AAAAA'
+        @aluno = Aluno.new("1","Luiz","12345","10/01/01")
     end
 
     it 'Codigo Seminario' do
@@ -34,7 +34,7 @@ describe Seminario do
     end
 
     it 'verificar NumMax' do
-      aluno2 = "MMMM"
+      aluno2 = Aluno.new("2","Luiz2","2212345","10/01/01")
       @seminario.incluir_alunos(@aluno)
       @seminario.incluir_alunos(aluno2)
       expect(@seminario.aluno? aluno2).to eq false
